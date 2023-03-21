@@ -8,14 +8,14 @@ import java.util.List;
 @Service
 public class ListaDePalavrasService {
 
-    public List<String> palavasList(String nome1) {
+    public List<String> palavasList(String texto) {
 
-        String nome = "";
-        List<String> nomeList = new ArrayList<>();
+        texto = "";
+        List<String> palavraList = new ArrayList<>();
 
-        for (Integer cont = 0; cont < 5; cont++) {
-            nomeList.add(nome1);
+        for (String cont = texto; cont < texto ; cont++) {
+            palavraList.add(texto);
         }
-        return nomeList;
+        return palavraList;
     }
 }

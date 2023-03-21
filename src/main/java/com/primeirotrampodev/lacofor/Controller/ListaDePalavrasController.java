@@ -16,8 +16,8 @@ public class ListaDePalavrasController {
     private ListaDePalavrasService listaDePalavrasService;
 
     @GetMapping("/palavras-list")
-    public List<String> palavasList(@RequestParam ("nome") String nome){
+    public List<String> palavasList(@RequestParam ("texto") String texto){
 
-        return listaDePalavrasService.palavasList(nome);
+        return listaDePalavrasService.palavasList(texto);
     }
 }
