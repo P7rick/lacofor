@@ -1,21 +1,22 @@
 package com.primeirotrampodev.lacofor.Service;
 
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.List;
+
 @Service
 public class ListaDePalavrasService {
 
-    public List<String> palavasList(String texto) {
+    public List<Character> palavrasList(String texto) {
 
-        texto = "";
-        List<String> palavraList = new ArrayList<>();
+        List<Character> palavraList = new ArrayList<>();
 
-        for (String cont = texto; cont < texto ; cont++) {
-            palavraList.add(texto);
+        for (Integer cont = 0; cont < texto.length(); cont++) {
+            palavraList.add(texto.charAt(cont));
+
         }
+
         return palavraList;
     }
 }

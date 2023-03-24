@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
 import java.util.List;
+
 @RestController
 @RequestMapping("/laço-for")
 public class ListaDePalavrasController {
@@ -16,8 +16,8 @@ public class ListaDePalavrasController {
     private ListaDePalavrasService listaDePalavrasService;
 
     @GetMapping("/palavras-list")
-    public List<String> palavasList(@RequestParam ("texto") String texto){
+    public List<Character> palavasList(@RequestParam ("texto") String texto){
 
-        return listaDePalavrasService.palavasList(texto);
+        return listaDePalavrasService.palavrasList(texto);
     }
 }

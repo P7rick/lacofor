@@ -3,18 +3,24 @@ package com.primeirotrampodev.lacofor.Service;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
 import java.util.List;
 @Service
 public class DivisoresLaçoForService {
 
-    public Integer divisores(Integer numero) {
+    public List<Integer> divisores(Integer numero) {
+
+        List<Integer> resultado = new ArrayList<>();
+
+        for (Integer cont = 1; cont <= numero; cont++) {
 
 
-        Integer cont;
-        for (cont = numero; cont > 1 && !(numero % cont == 0); cont--) { //  != operador não, / perguntar se o resto da divisao por cont for igual a 0
+            if(numero % cont == 0){
+                resultado.add(cont);
 
+            }
         }
-        return cont;
+        return resultado;
     }
 }
 
